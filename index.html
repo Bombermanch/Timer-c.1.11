@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1.0">
+
+	<link rel="stylesheet" href="src/css/style.css">
+	<title>Таймер</title>
+</head>
+<body>
+	<div class="container">
+		<div class="timer">
+			<h1 class="timer__header">Таймер</h1>
+			<div class="timer__numbers">
+				<div class="col">
+					<input class="timer__minutes" type="text" readonly value="00">
+					<p class="timer__text">Минуты</p>	
+				</div>								
+				<div class="col">
+					<input class="timer__seconds" type="text" readonly value="00">
+					<p class="timer__text">Секунды</p>
+				</div>				
+			</div>
+			<p class="finally-message d-none">Время истекло!</p>
+			<div class="timer__buttons">
+				<button class="btn btn-add">+1 секунда</button>
+				<button class="btn btn-minus">-1 секунда</button>
+				<button class="btn btn-start">Старт</button>
+				<!--<button class="btn btn-pause">Пауза</button>-->
+				<button class="btn btn-reset">Сброс</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="src/js/main.js"></script>
+</body>
+</html>

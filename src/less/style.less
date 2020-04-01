@@ -1,0 +1,123 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+.d-block{
+	display: block;
+}
+.d-none{
+	display: none!important;
+}
+.container{
+	display: flex;
+	height: 100vh;
+	background: #a3cc92;
+	margin: 0 auto;
+	justify-content: center;
+	align-items: center;
+	max-width: 100%;
+
+}
+.timer{
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;	
+	max-width: 100%;
+	min-width: 300px;
+	min-height: 300px;
+	&__numbers{
+
+		min-height: 100px;
+		min-width: 70%;
+		background: pink;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	.col{
+		text-align: center;
+		padding: 10px;
+	}
+
+	}
+	&__minutes, &__seconds{
+		text-align: center;
+		font-size: 32px;
+		font-weight: 800;
+		max-width: 70px;
+		min-height: 70px;
+	}
+	&__buttons{
+		display: grid;
+		grid-template-columns: 1fr;		
+		min-width:100%;
+
+		.btn{
+			border: none;			
+			min-width: 100px;
+			min-height: 50px;
+			&-add{
+				background: #daed0b;
+			}
+			&-minus{
+				background: #2a7dd6;
+			}
+			&-pause{
+				background: #ffb600;
+			}
+			&-start{
+				background: #37d326;
+			}
+			&-reset{
+				background: #e54242;
+			}
+		}
+	}
+	.finally-message{
+		font-size: 40px;
+		font-weight: 800;
+		color: red;
+	}
+
+}
+
+
+@media (min-width: 576px) {
+  /* CSS для: 576px <= ширины <= 767px */
+	.timer__buttons{
+  	grid-template-columns: repeat(2, 1fr);
+  }
+}
+ 
+/* md-устройства (больше или равно 768px) */
+@media (min-width: 768px) {
+  /* CSS для: 768px <= ширины <= 991px */
+  	.timer__buttons{
+  	grid-template-columns: repeat(4, 1fr);
+  }
+
+}
+ 
+/* lg-устройства (больше или равно 992px) */
+@media (min-width: 992px) {
+  /* CSS для: 992px <= ширины <= 1119px */
+  .container{
+		max-width: 80%;
+	}
+
+
+	
+}
+ 
+/* xl-устройства (больше или равно 1200px) */
+@media (min-width: 1200px) {
+  /* CSS для: ширины >= 1200px */
+	.container{
+		max-width: 80%;
+	}
+}
